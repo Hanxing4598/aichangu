@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="renderer" content="webkit">
+<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="layout_doc" ng-cloak ng-controller="OptionalController">
+        <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/header'"></div>
+        <div class="layout-wrapper">
+            <div class="layout_body relative">
+                <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/nav'"></div>
+                <div class="layout-content">
+                    <div class="content-header">
+                        <div class="left fl">
+                            <span class="title"><%= htmlWebpackPlugin.options.title %></span>
+                            <a href="javascript:;" class="btn btn-white inline-block">取消自选</a>
+                        </div>
+                        <div class="right fr">
+                            <div class="form-item form-item-s">
+                                <input class="input" type="text" value="" placeholder="请输入股票代码/简称" />
+                                <span class="search-icon"></span>
+                                <ul class="search-list" ng-if="list">
+                                    <li>
+                                        <div class="info fl">
+                                            000605<span class="name">渤海股份</span>
+                                        </div>
+                                        <a href="javascript:;" class="button fr">加自选</a>
+                                    </li>
+                                    <li>
+                                        <div class="info fl">
+                                            000<span class="red-color">605</span><span class="name">渤海股份</span>
+                                        </div>
+                                        <a href="javascript:;" class="button fr">加自选</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="table-list">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="checkbox selected"></div>
+                                        </th>
+                                        <th>代码名称</th>
+                                        <th>最新价</th>
+                                        <th>涨跌</th>
+                                        <th>涨跌幅</th>
+                                        <th>开盘价</th>
+                                        <th>昨收价</th>
+                                        <th>昨收价</th>
+                                        <th>最高价</th>
+                                        <th>最低价</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="selected">
+                                        <td class="wrap">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">600001</p>
+                                                <p class="text">青岛啤酒</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text red-color">+0.36</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text red-color">+1.02%</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <a class="link">下单</a>
+                                                <a class="link">取消自选</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wrap">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">600001</p>
+                                                <p class="text">青岛啤酒</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text green-color">+0.36</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text green-color">+1.02%</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <p class="text">6.35</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="wrap">
+                                                <a class="link">下单</a>
+                                                <a class="link">取消自选</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="pager" class="kkpager"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="<%=htmlWebpackPlugin.options.dll %>"></script>
+</body>
+</html> 

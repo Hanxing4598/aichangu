@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="renderer" content="webkit">
+<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="layout_doc" ng-cloak ng-controller="DiscrepancyController">
+        <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/header'"></div>
+        <div class="layout-wrapper">
+            <div class="layout_body relative">
+                <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/nav'"></div>
+                <div class="layout-content">
+                    <div class="content-header">
+                        <div class="left fl">
+                            <div class="tab">
+                                <a href="javascript:;" class="tab-item active">在线入金</a>
+                                <a href="javascript:;" class="tab-item">在线出金</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center-wrap">
+                        <!-- 买入 -->
+        
+                        <!-- 卖出 -->
+                        <div class="left">
+                            <div class="text-wrap clear_fix">
+                                <p class="text fl">姓名</p>
+                                <p class="text fr">陈轩</p>
+                            </div>
+                            <div class="text-wrap clear_fix">
+                                <p class="text fl">会员账户</p>
+                                <p class="text fr">U3001</p>
+                            </div>
+                            <div class="form-item form-item-b">
+                                <input class="input" type="text" placeholder="充值金额" />
+                            </div>
+                            <a href="javascript:;" class="btn block">快捷支付</a>
+                            <div class="tips">
+                                <p>注意：</p>
+                                <p>1、充值金额不能小于100元，</p>
+                                <p>2、支付成功后请【查询账户资产】或【入金记录】查看是否充值到账成功</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-header">
+                        <div class="left fl">
+                            <span class="title">入金记录</span>
+                        </div>
+                        <div class="right fr">
+                            <div class="form-wrap">
+                                <div class="form-date form-inline">
+                                    <span class="form-text">入账时间</span>
+                                    <div class="form-item form-item-s">
+                                        <input class="input" name="email" type="email" ng-model="form.startTime" placeholder="起始日期" />
+                                    </div>
+                                    <span class="form-text">至</span>
+                                    <div class="form-item form-item-s">
+                                        <input class="input" type="text" ng-model="form.endTime" placeholder="起始日期" />
+                                    </div>
+                                    <a href="javascript:;" class="button" ng-click="query()">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-list">
+                        <table class="table table-border">
+                            <thead>
+                                <tr>
+                                    <th style="width: 25%;">订单编号</th>
+                                    <th style="width: 25%;">支付类型</th>
+                                    <th style="width: 25%;">充值金额</th>
+                                    <th style="width: 25%;">入账时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">20181626163805</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">入金</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">500</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">2017-10-26 15:36</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="pager" class="kkpager"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="<%=htmlWebpackPlugin.options.dll %>"></script>
+</body>
+</html> 

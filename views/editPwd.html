@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="renderer" content="webkit">
+<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="layout_doc" ng-cloak ng-controller="EditController">
+        <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/header'"></div>
+        <div class="layout-wrapper">
+            <div class="layout_body relative">
+                <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/nav'"></div>
+                <div class="layout-content">
+                    <div class="content-header">
+                        <div class="left fl">
+                            <div class="title">个人资料</div>
+                        </div>
+                    </div>
+                    <div class="center-wrap">
+                        <div class="form-item form-item-b">
+                            <input class="input" type="password" placeholder="输入旧密码" />
+                        </div>
+                        <div class="form-item form-item-b">
+                            <input class="input" type="password" placeholder="输入新密码" />
+                        </div>
+                        <div class="form-item form-item-b">
+                            <input class="input" type="password" placeholder="确认新密码" />
+                        </div>
+                        <a href="javascript:;" class="btn btn-primary">修改密码</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="<%=htmlWebpackPlugin.options.dll %>"></script>
+</body>
+</html> 

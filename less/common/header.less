@@ -1,0 +1,85 @@
+@import "var.less";
+.header-wrapper {
+    .info-wrap {
+        height: 22px;
+        line-height: 22px;
+        padding: 6px 0;
+        font-size: 14px;
+        box-sizing: content-box;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid @bColor;
+        .btn {
+            font-size: 14px;
+        }
+    }
+    .info {
+        height: 100%;
+        color: @textColor2;
+        .num {
+            color: @redColor;
+        }
+    }
+    .link-wrap {
+        font-size: 0;
+    }
+    .link {
+        padding-left: 10px;
+        margin-left: 10px;
+        color: @textColor2;
+        border-left: 1px solid @bColor;
+        font-size: 14px;
+        &:first-child {
+            border-left: none;
+        }
+    }
+    .name {
+        margin-right: 8px;
+        color: @colorPrimary;
+    }
+    .nav-wrap {
+        padding: 16px 0;
+        height: 54px;
+        font-size: 0;
+        box-sizing: content-box;
+        .tab {
+            padding: 10px 0;
+            float: right;
+        }
+        .item {
+            position: relative;
+            display: inline-block;
+            padding: 0 30px;
+            height: 34px;
+            line-height: 34px;
+            font-size: 14px;
+            color: #333;
+            &:last-child {
+                padding-right: 0;
+            }
+            &.active {
+                position: relative;
+                color: @colorPrimary;
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 30px;
+                    right: 30px;
+                    height: 2px;
+                    background-color: @colorPrimary;
+                }
+                &:last-child::after {
+                    right: 0;
+                }
+            }
+        }
+    }
+    .logo {
+        display: inline-block;
+        width: 203px;
+        height: 53px;
+        background: url('/web/resource/img/logo.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}

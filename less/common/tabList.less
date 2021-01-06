@@ -1,0 +1,142 @@
+@import "var.less";
+body,html {
+    overflow: hidden;
+}
+.table-list {
+    .table {
+        width: 100%;
+        font-size: 14px;
+        th, td {
+            padding: 5px;
+            text-align: center;            
+        }
+        td {
+            height: 60px;
+            vertical-align: middle;
+        }
+        th {
+            height: 36px;
+            line-height: 36px;
+            vertical-align: middle;
+        }
+        thead {
+            tr {
+                border-top: 1px solid @bColor;
+            }
+        }
+        tr {
+            border-bottom: 1px solid @bColor;
+            &.selected {
+                background-color: #f5f5f5;
+            }
+        }
+        .wrap {
+            height: 38px;
+            .text {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .link {
+                display: inline-block;
+                margin: 0 7px;
+                color: @colorPrimary;
+            }
+        }
+        &.table-border {
+            tr {
+                border: 0;
+                th, td {
+                    &:first-child {
+                        border-left: 0;
+                    }
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+            td, th {
+                border: 1px solid @bColor;
+            }
+        }
+    }
+    .table-footer {
+        background-color: #f5f5f5;
+        font-weight: 700;
+        font-size: 18px;
+        .wrap {
+            line-height: 38px;
+        }
+    }
+}
+.checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/web/resource/img/checkbox_no_select.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    &.selected {
+        background-image: url("/web/resource/img/checkbox_select.png");
+    }
+}
+.table-list-top {
+    margin: 0 -20px;
+    padding: 0 20px;
+    font-size: 0;
+    border-bottom: 10px solid #f5f5f5;
+    .title {
+        display: inline-block;
+        vertical-align: top;
+        width: 110px;
+        line-height: 88px;
+        font-size: 18px;
+    }
+    .item {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        width: 284px;
+        padding: 20px 0 20px 108px;
+        font-size: 14px;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 22px;
+            bottom: 22px;
+            width: 1px;
+            background-color: @bColor;
+        }
+    }
+    .num {
+        margin-top: 17px;
+        font-size: 24px;
+    }
+    .s {
+        vertical-align: bottom;
+    }
+    .icon {
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        width: 55px;
+        height: 55px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        &.icon1 {
+            background-image: url("/web/resource/img/my_banus_icon1.png");
+        }
+        &.icon2 {
+            background-image: url("/web/resource/img/my_banus_icon2.png");
+        }
+        &.icon3 {
+            background-image: url("/web/resource/img/my_banus_icon3.png");
+        }
+    }
+    .label-text {
+        color: @textColor2;
+    }
+}

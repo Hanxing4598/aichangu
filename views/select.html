@@ -1,0 +1,7 @@
+<div class="form-item form-item-s form-select" ng-click="toggle()">
+    <input type="hidden" ng-model="selectCurrent.key" />
+    <div class="input" ng-bind="selectCurrent.value"></div>
+    <ul class="form-select-list" ng-show="showDrow">
+        <li ng-repeat="s in selectData" ng-click="selectVal(s.key)" ng-bind="s.value"></li>
+    </ul>
+</div>

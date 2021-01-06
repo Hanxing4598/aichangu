@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="renderer" content="webkit">
+<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="layout_doc" ng-cloak ng-controller="LoginController">
+        <header class="header-wrapper doc_head">
+            <div class="nav-wrap doc_head_content">
+                <span class="logo"></span>
+            </div>
+        </header>
+        <div class="login-wrapper">
+            <div class="content">
+                <div class="bg"></div>
+                <div class="form">
+                    <div class="form-item form-item-b user">
+                        <input class="input" type="text" value="" placeholder="请输入用户名" />
+                    </div>
+                    <div class="form-item form-item-b pwd">
+                        <input class="input" type="text" value="" placeholder="请输入用户名" />
+                    </div>
+                    <div class="form-item form-item-b code">
+                        <input class="input" type="text" value="" placeholder="请输入用户名" />
+                        <img class="code-img" src="/web/resource/img/banner.png" title="点击换验证码" width="98" height="24"/>
+                    </div>
+                </div>
+                <a href="javascript:;" class="btn btn-primary block">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="<%=htmlWebpackPlugin.options.dll %>"></script>
+</body>
+</html> 

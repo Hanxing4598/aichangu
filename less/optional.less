@@ -1,0 +1,45 @@
+@import "./common/var.less";
+@import "./common/nav.less";
+@import "./common/form.less";
+@import "./common/tabList.less";
+
+.content-header {
+    .form-item-s {
+        width: 240px;
+    }
+}
+.search-list {
+    position: absolute;
+    top: 30px;
+    left: -1px;
+    right: -1px;
+    padding: 0 10px;
+    border: 1px solid @bColor;
+    border-top: none;
+    background-color: #fff;
+    li {
+        height: 24px;
+        line-height: 24px;
+        margin: 12px 0;
+        font-size: 14px;
+    }
+    .info {
+        color: @textColor2;
+    }
+    .button {
+        position: relative;
+        color: @colorPrimary;
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 14px;
+            width: 1px;
+            margin-left: -10px;
+            margin-top: 5px;
+            background-color: @bColor;
+        }
+    }
+}

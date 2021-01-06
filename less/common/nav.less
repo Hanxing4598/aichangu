@@ -1,0 +1,22 @@
+@import "var.less";
+.nav-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 180px;
+    background-color: #2c2c2c;
+    text-align: center;
+    font-size: 16px;
+    .nav-item {
+        height: 72px;
+        line-height: 72px;
+        &.active {
+            background-color: @colorPrimary;
+        }
+    }
+    a {
+        display: block;
+        color: #fff;
+    }
+}

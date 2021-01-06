@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="renderer" content="webkit">
+<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="layout_doc" ng-cloak ng-controller="PositionController">
+        <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/header'"></div>
+        <div class="layout-wrapper">
+            <div class="layout_body relative">
+                <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/nav'"></div>
+                <div class="layout-content">
+                    <div class="table-list-top">
+                        <div class="title">账户信息</div>
+                        <div class="item">
+                            <span class="icon icon1"></span>
+                            <div class="info">
+                                <p class="label-text">账户资金</p>
+                                <div class="num">189987.23<span class="s">元</span></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon2"></span>
+                            <div class="info">
+                                <p class="label-text">占用资金</p>
+                                <div class="num">189987.23<span class="s">元</span></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon3"></span>
+                            <div class="info">
+                                <p class="label-text">可用额度</p>
+                                <div class="num">189987.23<span class="s">元</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-header">
+                        <div class="content-header">
+                            <div class="left fl">
+                                <span class="title">平仓单</span>
+                            </div>
+                            <div class="right fr">
+                                <div class="form-wrap">
+                                    <div class="form-date form-inline">
+                                        <div class="form-item form-item-s">
+                                            <input class="input" name="email" type="email" ng-model="form.startTime" placeholder="起始日期" />
+                                        </div>
+                                        <span class="form-text">至</span>
+                                        <div class="form-item form-item-s">
+                                            <input class="input" type="text" ng-model="form.endTime" placeholder="起始日期" />
+                                        </div>
+                                        <a href="javascript:;" class="button" ng-click="query()">查询</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-list">
+                        <table class="table table-border">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">订单号</th>
+                                    <th rowspan="2">代码名称</th>
+                                    <th rowspan="2">业务类型</th>
+                                    <th colspan="2">买入</th>
+                                    <th colspan="3">平仓</th>
+                                    <th rowspan="2">盈亏(元)</th>
+                                    <th rowspan="2">总手续费</th>
+                                </tr>
+                                <tr>
+                                    <th>下单时间</th>
+                                    <th>成本价</th>
+                                    <th>下单时间</th>
+                                    <th>成本价</th>
+                                    <th>数量(手)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">600001</p>
+                                            <p class="text">青岛啤酒</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">6.35</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">+0.36</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">+1.02%</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">6.35</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">6.35</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text red-color">6.35</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text red-color">6.35</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text red-color">6.35</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <a class="link">买入</a>
+                                            <a class="link">卖出</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-footer">
+                                    <td colspan="5" class="tl">
+                                        <div class="wrap">
+                                            <p class="text">合计</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text">202365.32</p>
+                                        </div>
+                                    </td>
+                                    <td colspan="2"></td>
+                                    <td>
+                                        <div class="wrap">
+                                            <p class="text red-color">+6356.36</p>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="pager" class="kkpager"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="<%=htmlWebpackPlugin.options.dll %>"></script>
+</body>
+</html> 

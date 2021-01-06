@@ -1,0 +1,73 @@
+@import "_reset.less";
+
+@import "var.less";//整体布局
+
+//@rootPath:"/jtrade";
+body {
+    font-size: 16px;
+    color: @textColor1;
+    line-height: 1;
+}
+
+.clear_fix:after, .top_bar .right:after, .header .section:after, .header .head_nav ul:after, .header .balance_slider .tit:after, .header .balance_slider ul li:after, #doc_lead .head_lead:after, .foot_copyright:after, .foot_end ul:after, .group:after, div.usd_bit_tips:after, .index_box_2.information .p_t_x:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*html5*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+/**防止angularjs页面加载时闪屏**/
+[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak.x-ng-cloak{ 
+    display: none!important; 
+}
+.none{display:none!important;}
+.float-left{
+    float:left;   
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.red-color {
+    color: @redColor !important;
+}
+.green-color {
+    color: @greenColor !important;
+}
+.btn {
+    padding: 0 10px;
+    min-width: 80px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.btn-primary {
+    background-color: @colorPrimary;
+    color: #fff;
+}
+.btn-sub {
+    color: @colorPrimary;
+    border: 1px solid;
+}
+.btn-white {
+    color: @textColor2;
+    border: 1px solid @bColor;
+}
+.inline-block {
+    display: inline-block;
+}
+.block {
+    display: block;
+}
+.relative {
+    position: relative;
+}
+
+@import "layout.less";
+@import "header.less";
+@import "footer.less";

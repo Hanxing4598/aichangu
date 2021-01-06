@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="renderer" content="webkit">
+<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="layout_doc" ng-cloak ng-controller="NoticeController">
+        <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/header'"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="banner" src="/web/resource/img/banner2.png" />
+                </div>
+            </div>
+        </div>
+        <div class="layout_body">
+            <ul class="list">
+                <li class="item">
+                    <a href="<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/noticeDetail" class="title over-1" title="早评：沪指低开跌0.37% 钢铁股逆势走强">早评：沪指低开跌0.37% 钢铁股逆势走强</a>
+                    <h3 class="sub-title">外围情况：美美股尾盘跳水全线收跌，科技股跌幅居前，拖累纳指跌近1%。值得关注的是，摩根大通重申了对特斯拉股票的“减持”评级，特斯拉股价收盘重挫逾7%。因独立日假期，美国市场提前至美东时间13:00（北京时间凌晨1点）休市...</h3>
+                </li>
+                <li class="item">
+                    <a class="title over-1" title="早评：沪指低开跌0.37% 钢铁股逆势走强">早评：沪指低开跌0.37% 钢铁股逆势走强</a>
+                    <h3 class="sub-title">外围情况：美美股尾盘跳水全线收跌，科技股跌幅居前，拖累纳指跌近1%。值得关注的是，摩根大通重申了对特斯拉股票的“减持”评级，特斯拉股价收盘重挫逾7%。因独立日假期，美国市场提前至美东时间13:00（北京时间凌晨1点）休市...</h3>
+                </li>
+                <li class="item">
+                    <a class="title over-1" title="早评：沪指低开跌0.37% 钢铁股逆势走强">早评：沪指低开跌0.37% 钢铁股逆势走强</a>
+                    <h3 class="sub-title">外围情况：美美股尾盘跳水全线收跌，科技股跌幅居前，拖累纳指跌近1%。值得关注的是，摩根大通重申了对特斯拉股票的“减持”评级，特斯拉股价收盘重挫逾7%。因独立日假期，美国市场提前至美东时间13:00（北京时间凌晨1点）休市...</h3>
+                </li>
+                <li class="item">
+                    <a class="title over-1" title="早评：沪指低开跌0.37% 钢铁股逆势走强">早评：沪指低开跌0.37% 钢铁股逆势走强</a>
+                    <h3 class="sub-title">外围情况：美美股尾盘跳水全线收跌，科技股跌幅居前，拖累纳指跌近1%。值得关注的是，摩根大通重申了对特斯拉股票的“减持”评级，特斯拉股价收盘重挫逾7%。因独立日假期，美国市场提前至美东时间13:00（北京时间凌晨1点）休市...</h3>
+                </li>
+            </ul>
+            <div id="pager" class="kkpager"></div>
+        </div>
+        <div ng-include="'<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/footer'"></div>
+    </div>
+    <script type="text/javascript" src="<%=htmlWebpackPlugin.options.dll %>"></script>
+</body>
+</html> 

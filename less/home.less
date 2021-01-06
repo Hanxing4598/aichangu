@@ -1,0 +1,158 @@
+@import "./common/var.less";
+table td, table th {
+    padding: 0;
+}
+.banner {
+    width: 100%;
+}
+.label {
+    padding: 36px 0 18px;
+    .title {
+        margin-right: 16px;
+        font-size: 24px;
+    }
+    .text {
+        vertical-align: bottom;
+        color: @textColor2;
+        a {
+            color: @textColor2;
+        }
+    }
+    .line {
+        display: inline-block;
+        vertical-align: bottom;
+        height: 14px;
+        width: 1px;
+        margin: 0 10px;
+        background-color: @textColor3;
+    }
+    .btn {
+        line-height: 25px;
+    }
+}
+.list {
+    background-color: #f5f5f5;
+}
+.list-table {
+    width: 100%;
+    padding: 0 24px;
+}
+.list-table tr {
+    height: 98px;
+    border-bottom: @bColor;
+}
+.list-table td {
+    width: 145px;
+    vertical-align: middle;
+}
+.list-table .label-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    &.red {
+        color: @redColor;
+    }
+}
+.list-table .sub-text {
+    color: #7e7e7e;
+    font-size: 14px;
+}
+.list-table {
+    tr {
+        td:nth-child(1) {
+            .wrap {
+                width: 160px;
+            }
+        }
+        td:nth-child(2) {
+            .wrap {
+                width: 140px;
+            }
+        }
+        td:last-child {
+            .wrap {
+                padding: 0;
+            }
+        }
+    }
+}
+.list-table .wrap {
+    padding: 0 10px;
+    text-align: left;
+    .btn {
+        display: block;
+        width: 80px;
+        line-height: 32px;
+        margin: 0 auto;
+        float: right;
+    }
+}
+.list-wrap {
+    position: relative;
+    width: 561px;
+    height: 526px;
+    padding-left: 40px;
+    .text {
+        margin: 20px 0 0 -40px;
+        color: @redColor;
+    }
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        top: 58px;
+        left: 0;
+    }
+    &::after {
+        bottom: 0;
+        width: 2px;
+        background-color: @bColor;
+    }
+    &::before {
+        margin-left: -3px;
+        width: 8px;
+        height: 28px;
+        background-color: @colorPrimary;
+        border-radius: 20px;
+        z-index: 2;
+    }
+}
+.note-wrapper {
+    position: relative;
+    padding-bottom: 50px;
+    .line {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: @bColor;
+    }
+}
+.note-list {
+    font-size: 0;
+    .item-wrap {
+        display: inline-block;
+        width: 50%;
+        padding-right: 40px;
+        &.border {
+            .item {
+                border-bottom: 1px solid @bColor;
+            }
+        }
+    }
+    .item {
+        padding: 40px 0;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .date {
+        margin: 10px 0 20px;
+        color: @textColor2;
+    }
+    .text {
+        line-height: 18px;
+        color: @textColor2;
+    }
+}

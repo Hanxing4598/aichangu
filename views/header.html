@@ -1,0 +1,24 @@
+<div class="doc_head">
+    <header class="header-wrapper">
+        <div class="info-wrap">
+            <div class="info doc_head_content">
+                <p class="text fl">您好，<span class="name">张默默</span>欢迎回来</p>
+                
+                <a href="#" class="btn btn-primary fr" ng-if="isLogin">立即登录</a>
+                <div class="link-wrap fr" ng-else>
+                    <a href="<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/personal" class="link">个人中心</a>
+                    <a href="<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/inbox" class="link">收件箱(<span class="num">10</span>)</a>
+                    <a href="javascript:;" class="link">退出</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-wrap doc_head_content">
+            <span class="logo"></span>
+            <div class="tab">
+                <a href="<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/index" class="item {{currentPage == 1 ? 'active' : ''}}">首&nbsp;&nbsp;&nbsp;&nbsp;页</a>
+                <a href="<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/optional" class="item {{currentPage == 2 ? 'active' : ''}}">策略投资</a>
+                <a href="<%=htmlWebpackPlugin.options.serviceRootPath%>/demo/notice" class="item {{currentPage == 3 ? 'active' : ''}}">网站公告</a>
+            </div>
+        </div>
+    </header>
+</div>
